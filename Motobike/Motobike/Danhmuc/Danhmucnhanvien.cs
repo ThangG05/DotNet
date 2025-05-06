@@ -72,9 +72,9 @@ namespace Motobike.Danhmuc
                 cbochucvu.Text = congviec;
                
             }
+            txtma.Enabled = false;
         }
-
-        private void btnthem_Click(object sender, EventArgs e)
+        private void clear()
         {
             txtma.Text = "";
             txtten.Text = "";
@@ -83,18 +83,21 @@ namespace Motobike.Danhmuc
             cbochucvu.Text = "";
             txtsdt.Text = "";
             cbogioitinh.SelectedIndex = -1;
-            
+        }
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            clear();
+            btnxoa.Enabled = false;
+            btnsua.Enabled = false;
+            btnboqua.Enabled = true;
+            txtma.Enabled = true;
         }
 
         private void btnboqua_Click(object sender, EventArgs e)
         {
-            txtma.Text = "";
-            txtten.Text = "";
-            txtdiachi.Text = "";
-            txtdate.Text = "";
-            cbochucvu.Text = "";
-            txtsdt.Text = "";
-            cbogioitinh.SelectedIndex = -1;
+            clear();
+            btnxoa.Enabled = true;
+            btnsua.Enabled = true;
             txtma.Enabled = false;
         }
         public bool ERR()
@@ -184,20 +187,25 @@ namespace Motobike.Danhmuc
                 MessageBox.Show("Không có thông tin để xóa");
                 return;
             }
-            SqlConnection conn = null;
-            CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
-            conn = ketNoi.CON();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = @"delete NhanVien
-                                Where MaNV='"+txtma.Text+"'";
-            cmd.Connection = conn;
-            int x = cmd.ExecuteNonQuery();
-            if (x > 0)
+            DialogResult res= MessageBox.Show("Bạn có chắn muốn xóa","Hỏi",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa thành công");
-                hienthi();
+                SqlConnection conn = null;
+                CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
+                conn = ketNoi.CON();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"delete NhanVien
+                                Where MaNV='" + txtma.Text + "'";
+                cmd.Connection = conn;
+                int x = cmd.ExecuteNonQuery();
+                if (x > 0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                    hienthi();
+                }
             }
+            
         }
         private string TimMaCV(string a)
         {

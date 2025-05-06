@@ -103,6 +103,16 @@ namespace Motobike.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find {
+            get {
+                object obj = ResourceManager.GetObject("find", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap findmain {
             get {
                 object obj = ResourceManager.GetObject("findmain", resourceCulture);
@@ -296,6 +306,16 @@ namespace Motobike.Properties {
         internal static System.Drawing.Bitmap paint1 {
             get {
                 object obj = ResourceManager.GetObject("paint1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print {
+            get {
+                object obj = ResourceManager.GetObject("print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

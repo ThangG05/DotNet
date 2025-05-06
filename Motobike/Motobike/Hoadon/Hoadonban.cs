@@ -159,7 +159,7 @@ namespace Motobike.Hoadon
         private void txtthue_Leave(object sender, EventArgs e)
         {
             int vat = int.Parse(txtthue.Text);
-            int thanhtien = int.Parse(txtthanhtien.Text);
+            int thanhtien = int.Parse(txttongtien.Text);
             double tongtien = thanhtien + (thanhtien * (vat / 100.0));
             txttongtien.Text = tongtien.ToString();
         }
@@ -199,6 +199,7 @@ namespace Motobike.Hoadon
 
         private void btnluu_Click(object sender, EventArgs e)
         {
+
             SqlConnection conn = null;
             CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
             conn = ketNoi.CON();
@@ -225,7 +226,17 @@ namespace Motobike.Hoadon
                                 " ," + int.Parse(txtthanhtien.Text)+ ");";
             cmd1.Connection = conn;
             int y = cmd1.ExecuteNonQuery();
-            if (x > 0 && y > 0)
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "UPDATE DMHang " +
+                    "SET SoLuong = SoLuong - @soluong " +
+                    "WHERE MaHang = @mahang";
+
+            cmd2.Parameters.AddWithValue("@soluong", int.Parse(txtsolg.Text));
+            cmd2.Parameters.AddWithValue("@mahang", cbnmahang.Text);
+            cmd2.Connection = conn;  
+            int z = cmd2.ExecuteNonQuery();
+            if (x > 0 && y > 0 && z>0)
             {
                 MessageBox.Show("Lưu Hóa Đơn Thành Công");
             }
@@ -262,5 +273,7 @@ namespace Motobike.Hoadon
         {
             hienthi();
         }
+
+      
     }
 }

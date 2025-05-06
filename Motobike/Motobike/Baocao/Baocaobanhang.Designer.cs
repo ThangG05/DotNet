@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnin = new Guna.UI2.WinForms.Guna2Button();
             this.btntimlai = new Guna.UI2.WinForms.Guna2Button();
-            this.btntimkiem = new Guna.UI2.WinForms.Guna2Button();
             this.dgvbaocaoban = new System.Windows.Forms.DataGridView();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.cbnmnv = new System.Windows.Forms.ComboBox();
@@ -48,26 +46,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnin = new Guna.UI2.WinForms.Guna2Button();
+            this.btntimkiem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbaocaoban)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnin
-            // 
-            this.btnin.BorderRadius = 14;
-            this.btnin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnin.FillColor = System.Drawing.Color.Black;
-            this.btnin.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnin.ForeColor = System.Drawing.Color.White;
-            this.btnin.Location = new System.Drawing.Point(878, 428);
-            this.btnin.Name = "btnin";
-            this.btnin.Size = new System.Drawing.Size(180, 45);
-            this.btnin.TabIndex = 9;
-            this.btnin.Text = "In báo cáo";
-            this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // btntimlai
             // 
@@ -76,7 +59,7 @@
             this.btntimlai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btntimlai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btntimlai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btntimlai.FillColor = System.Drawing.Color.Black;
+            this.btntimlai.FillColor = System.Drawing.Color.OliveDrab;
             this.btntimlai.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntimlai.ForeColor = System.Drawing.Color.White;
             this.btntimlai.Location = new System.Drawing.Point(472, 428);
@@ -85,23 +68,6 @@
             this.btntimlai.TabIndex = 8;
             this.btntimlai.Text = "Tìm lại";
             this.btntimlai.Click += new System.EventHandler(this.btntimlai_Click);
-            // 
-            // btntimkiem
-            // 
-            this.btntimkiem.BorderRadius = 14;
-            this.btntimkiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btntimkiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btntimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btntimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btntimkiem.FillColor = System.Drawing.Color.Black;
-            this.btntimkiem.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntimkiem.ForeColor = System.Drawing.Color.White;
-            this.btntimkiem.Location = new System.Drawing.Point(92, 428);
-            this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(180, 45);
-            this.btntimkiem.TabIndex = 7;
-            this.btntimkiem.Text = "Tìm kiếm";
-            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
             // dgvbaocaoban
             // 
@@ -296,6 +262,46 @@
             this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn";
+            // 
+            // btnin
+            // 
+            this.btnin.BorderRadius = 14;
+            this.btnin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnin.FillColor = System.Drawing.Color.OliveDrab;
+            this.btnin.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnin.ForeColor = System.Drawing.Color.White;
+            this.btnin.Image = global::Motobike.Properties.Resources.print;
+            this.btnin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnin.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnin.Location = new System.Drawing.Point(878, 428);
+            this.btnin.Name = "btnin";
+            this.btnin.Size = new System.Drawing.Size(180, 45);
+            this.btnin.TabIndex = 9;
+            this.btnin.Text = "In báo cáo";
+            this.btnin.Click += new System.EventHandler(this.btnin_Click);
+            // 
+            // btntimkiem
+            // 
+            this.btntimkiem.BorderRadius = 14;
+            this.btntimkiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btntimkiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btntimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btntimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btntimkiem.FillColor = System.Drawing.Color.OliveDrab;
+            this.btntimkiem.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntimkiem.ForeColor = System.Drawing.Color.White;
+            this.btntimkiem.Image = global::Motobike.Properties.Resources.find;
+            this.btntimkiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btntimkiem.ImageSize = new System.Drawing.Size(34, 34);
+            this.btntimkiem.Location = new System.Drawing.Point(92, 428);
+            this.btntimkiem.Name = "btntimkiem";
+            this.btntimkiem.Size = new System.Drawing.Size(167, 45);
+            this.btntimkiem.TabIndex = 7;
+            this.btntimkiem.Text = "Tìm kiếm";
+            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
             // Baocaobanhang
             // 

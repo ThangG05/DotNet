@@ -416,6 +416,7 @@
             this.txttongtien.Name = "txttongtien";
             this.txttongtien.Size = new System.Drawing.Size(157, 27);
             this.txttongtien.TabIndex = 14;
+   
             // 
             // label15
             // 

@@ -56,19 +56,28 @@ namespace Motobike.Danhmuc
                 txtma.Text = code;
                 txtten.Text = name;
             }
+            txtma.Enabled = false;
 
         }
-        private void btnthem_Click(object sender, EventArgs e)
+        private void clear()
         {
             txtma.Text = "";
             txtten.Text = "";
+        }
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            clear();
+            btnxoa.Enabled = false;
+            btnsua.Enabled = false;
+            btnboqua.Enabled = true;
             txtma.Enabled = true;
         }
 
         private void btnboqua_Click(object sender, EventArgs e)
         {
-            txtma.Text = "";
-            txtten.Text = "";
+            clear();
+            btnxoa.Enabled = true;
+            btnsua.Enabled = true;
             txtma.Enabled = false;
         }
 
@@ -153,20 +162,25 @@ namespace Motobike.Danhmuc
                 MessageBox.Show("Lỗi vì mã màu đang được sử dụng trong DMHang");
                 return;
             }
-            SqlConnection conn = null;
-            CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
-            conn = ketNoi.CON();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = @"delete MauSac
-                               where MaMau='"+txtma.Text+"'";
-            cmd.Connection = conn;
-            int x = cmd.ExecuteNonQuery();
-            if (x > 0)
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn xóa","Hỏi",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa thành công");
-                hienthi();
+                SqlConnection conn = null;
+                CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
+                conn = ketNoi.CON();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"delete MauSac
+                               where MaMau='" + txtma.Text + "'";
+                cmd.Connection = conn;
+                int x = cmd.ExecuteNonQuery();
+                if (x > 0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                    hienthi();
+                }
             }
+            
         }
     }
 }

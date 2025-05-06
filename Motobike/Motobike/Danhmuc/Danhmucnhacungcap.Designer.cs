@@ -35,7 +35,6 @@
             this.txtdiachi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtma = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtsdt = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtten = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.btnsua = new Guna.UI2.WinForms.Guna2Button();
             this.btnthem = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtsdt = new System.Windows.Forms.MaskedTextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -68,11 +68,11 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtsdt);
             this.guna2GroupBox1.Controls.Add(this.label1);
             this.guna2GroupBox1.Controls.Add(this.txtdiachi);
             this.guna2GroupBox1.Controls.Add(this.txtma);
             this.guna2GroupBox1.Controls.Add(this.label4);
-            this.guna2GroupBox1.Controls.Add(this.txtsdt);
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.txtten);
             this.guna2GroupBox1.Controls.Add(this.label3);
@@ -140,15 +140,6 @@
             this.label4.Size = new System.Drawing.Size(65, 23);
             this.label4.TabIndex = 9;
             this.label4.Text = "Địa chỉ";
-            // 
-            // txtsdt
-            // 
-            this.txtsdt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsdt.Location = new System.Drawing.Point(139, 223);
-            this.txtsdt.Mask = "000-0000";
-            this.txtsdt.Name = "txtsdt";
-            this.txtsdt.Size = new System.Drawing.Size(200, 28);
-            this.txtsdt.TabIndex = 10;
             // 
             // label2
             // 
@@ -309,6 +300,14 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // txtsdt
+            // 
+            this.txtsdt.Location = new System.Drawing.Point(139, 224);
+            this.txtsdt.Mask = "(999) 000-0000";
+            this.txtsdt.Name = "txtsdt";
+            this.txtsdt.Size = new System.Drawing.Size(200, 29);
+            this.txtsdt.TabIndex = 12;
+            // 
             // Danhmucnhacungcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,8 +348,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtdiachi;
-        private System.Windows.Forms.MaskedTextBox txtsdt;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MaskedTextBox txtsdt;
     }
 }

@@ -221,7 +221,18 @@ namespace Motobike.Hoadon
                               "," + int.Parse(txtthanhtien.Text) + ");";
             cmd1.Connection = conn;
             int y = cmd1.ExecuteNonQuery();
-            if(x>0 && y > 0)
+            SqlCommand cmd2=new SqlCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "UPDATE DMHang " +
+                    "SET SoLuong = SoLuong + @soluong, " +
+                    "DonGiaBan = DonGiaNhap * 1.1 " +
+                    "WHERE MaHang = @mahang";
+
+            cmd2.Parameters.AddWithValue("@soluong", int.Parse(txtsolg.Text));
+            cmd2.Parameters.AddWithValue("@mahang",cbnmahang.Text);
+            cmd2.Connection = conn;
+            int z = cmd2.ExecuteNonQuery();
+            if (x>0 && y > 0 && z>0)
             {
                 MessageBox.Show("Lưu Hóa Đơn Thành Công");
             }

@@ -188,6 +188,7 @@ namespace Motobike.Danhmuc
                 txtgiaban.Text= giaban;
                 txtbaohanh.Text= baohanh;
             }
+            txtmahang.Enabled= false;
             string duongdan = txtanh.Text.Trim();
 
             if (File.Exists(duongdan))
@@ -209,8 +210,7 @@ namespace Motobike.Danhmuc
                 MessageBox.Show("Không tìm thấy ảnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void btnthem_Click(object sender, EventArgs e)
+        private void clear()
         {
             txtbaohanh.Text = "";
             txtanh.Text = "";
@@ -227,29 +227,25 @@ namespace Motobike.Danhmuc
             cbomansx.Text = "";
             cbomaphanh.Text = "";
             cbotinhtrang.Text = "";
-            txtmahang.Enabled = true;
             picanh.Image = null;
+        }
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            clear();
+            btnsua.Enabled = false;
+            btnxoa.Enabled = false;
+            btnboqua.Enabled = true;
+            txtmahang.Enabled = true;
+           
         }
 
         private void btnboqua_Click(object sender, EventArgs e)
         {
-            txtbaohanh.Text = "";
-            txtanh.Text = "";
-            txtgiaban.Text = "";
-            txtdungtich.Text = "";
-            txtgianhap.Text = "";
-            txtmahang.Text = "";
-            txtsoluong.Text = "";
-            txttenhang.Text = "";
-            cbomadongco.Text = "";
-            cbomahsx.Text = "";
-            cbomaloai.Text = "";
-            cbomamau.Text = "";
-            cbomansx.Text = "";
-            cbomaphanh.Text = "";
-            cbotinhtrang.Text = "";
+            clear();
+            btnxoa.Enabled=true;
+            btnsua.Enabled=true;
             txtmahang.Enabled = false;
-            picanh.Image = null;
+           
         }
         private void ERR()
         {
@@ -370,7 +366,31 @@ namespace Motobike.Danhmuc
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-
+            errorProvider1.Clear();
+            if (txtmahang.Text == "")
+            {
+                errorProvider1.SetError(txtmahang, "Không có thông tin để xóa");
+                MessageBox.Show("Không có thông tin để xóa");
+                return;
+            }
+            DialogResult res = MessageBox.Show("Bạn có chắc chắn muốn xóa", "Hỏi", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                SqlConnection conn = null;
+                CONECT.KetNoiXE ketNoi = new CONECT.KetNoiXE();
+                conn = ketNoi.CON();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"delete DMHang
+                                  where MaHang='"+txtmahang.Text+"'";
+                cmd.Connection = conn;
+                int x = cmd.ExecuteNonQuery();
+                if (x > 0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                    hienthi();
+                }
+            }
         }
 
         private void btnluu_Click(object sender, EventArgs e)

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cbochucvu = new System.Windows.Forms.ComboBox();
             this.cbogioitinh = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtma = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtsdt = new System.Windows.Forms.MaskedTextBox();
             this.txtten = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtdate = new System.Windows.Forms.MaskedTextBox();
@@ -53,7 +53,7 @@
             this.btnsua = new Guna.UI2.WinForms.Guna2Button();
             this.btnthem = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbochucvu = new System.Windows.Forms.ComboBox();
+            this.txtsdt = new System.Windows.Forms.MaskedTextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -74,13 +74,13 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtsdt);
             this.guna2GroupBox1.Controls.Add(this.cbochucvu);
             this.guna2GroupBox1.Controls.Add(this.cbogioitinh);
             this.guna2GroupBox1.Controls.Add(this.label1);
             this.guna2GroupBox1.Controls.Add(this.txtma);
             this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.label2);
-            this.guna2GroupBox1.Controls.Add(this.txtsdt);
             this.guna2GroupBox1.Controls.Add(this.txtten);
             this.guna2GroupBox1.Controls.Add(this.label6);
             this.guna2GroupBox1.Controls.Add(this.txtdate);
@@ -94,6 +94,19 @@
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(497, 519);
             this.guna2GroupBox1.TabIndex = 0;
+            // 
+            // cbochucvu
+            // 
+            this.cbochucvu.FormattingEnabled = true;
+            this.cbochucvu.Items.AddRange(new object[] {
+            "Thủ kho",
+            "Bán hàng",
+            "Kế toán",
+            "IT"});
+            this.cbochucvu.Location = new System.Drawing.Point(161, 210);
+            this.cbochucvu.Name = "cbochucvu";
+            this.cbochucvu.Size = new System.Drawing.Size(121, 29);
+            this.cbochucvu.TabIndex = 20;
             // 
             // cbogioitinh
             // 
@@ -154,15 +167,6 @@
             this.label2.Size = new System.Drawing.Size(129, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tên nhân viên";
-            // 
-            // txtsdt
-            // 
-            this.txtsdt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsdt.Location = new System.Drawing.Point(161, 374);
-            this.txtsdt.Mask = "000-0000";
-            this.txtsdt.Name = "txtsdt";
-            this.txtsdt.Size = new System.Drawing.Size(200, 28);
-            this.txtsdt.TabIndex = 16;
             // 
             // txtten
             // 
@@ -371,18 +375,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // cbochucvu
+            // txtsdt
             // 
-            this.cbochucvu.FormattingEnabled = true;
-            this.cbochucvu.Items.AddRange(new object[] {
-            "Thủ kho",
-            "Bán hàng",
-            "Kế toán",
-            "IT"});
-            this.cbochucvu.Location = new System.Drawing.Point(161, 210);
-            this.cbochucvu.Name = "cbochucvu";
-            this.cbochucvu.Size = new System.Drawing.Size(121, 29);
-            this.cbochucvu.TabIndex = 20;
+            this.txtsdt.Location = new System.Drawing.Point(161, 375);
+            this.txtsdt.Mask = "(999) 000-0000";
+            this.txtsdt.Name = "txtsdt";
+            this.txtsdt.Size = new System.Drawing.Size(200, 29);
+            this.txtsdt.TabIndex = 21;
             // 
             // Danhmucnhanvien
             // 
@@ -426,12 +425,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtma;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txtsdt;
         private System.Windows.Forms.MaskedTextBox txtdate;
         private Guna.UI2.WinForms.Guna2TextBox txtdiachi;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.ComboBox cbogioitinh;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox cbochucvu;
+        private System.Windows.Forms.MaskedTextBox txtsdt;
     }
 }

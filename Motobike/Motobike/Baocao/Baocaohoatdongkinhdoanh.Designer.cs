@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.rdotenhang = new System.Windows.Forms.RadioButton();
             this.rdotenhangx = new System.Windows.Forms.RadioButton();
+            this.rdotenhang = new System.Windows.Forms.RadioButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.rdoMMYYYY = new System.Windows.Forms.RadioButton();
-            this.rdothoigian = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMM = new System.Windows.Forms.TextBox();
-            this.txtYYYY = new System.Windows.Forms.TextBox();
-            this.txtbdau = new System.Windows.Forms.MaskedTextBox();
             this.txtketthuc = new System.Windows.Forms.MaskedTextBox();
+            this.txtbdau = new System.Windows.Forms.MaskedTextBox();
+            this.txtYYYY = new System.Windows.Forms.TextBox();
+            this.txtMM = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rdothoigian = new System.Windows.Forms.RadioButton();
+            this.rdoMMYYYY = new System.Windows.Forms.RadioButton();
             this.Chartbaocao = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvban = new System.Windows.Forms.DataGridView();
             this.buttimkiem = new Guna.UI2.WinForms.Guna2Button();
@@ -68,17 +68,6 @@
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Tiêu chí";
             // 
-            // rdotenhang
-            // 
-            this.rdotenhang.AutoSize = true;
-            this.rdotenhang.Location = new System.Drawing.Point(31, 64);
-            this.rdotenhang.Name = "rdotenhang";
-            this.rdotenhang.Size = new System.Drawing.Size(90, 25);
-            this.rdotenhang.TabIndex = 0;
-            this.rdotenhang.TabStop = true;
-            this.rdotenhang.Text = "Tên hàng";
-            this.rdotenhang.UseVisualStyleBackColor = true;
-            // 
             // rdotenhangx
             // 
             this.rdotenhangx.AutoSize = true;
@@ -89,6 +78,17 @@
             this.rdotenhangx.TabStop = true;
             this.rdotenhangx.Text = "Tên hãng";
             this.rdotenhangx.UseVisualStyleBackColor = true;
+            // 
+            // rdotenhang
+            // 
+            this.rdotenhang.AutoSize = true;
+            this.rdotenhang.Location = new System.Drawing.Point(31, 64);
+            this.rdotenhang.Name = "rdotenhang";
+            this.rdotenhang.Size = new System.Drawing.Size(90, 25);
+            this.rdotenhang.TabIndex = 0;
+            this.rdotenhang.TabStop = true;
+            this.rdotenhang.Text = "Tên hàng";
+            this.rdotenhang.UseVisualStyleBackColor = true;
             // 
             // guna2GroupBox2
             // 
@@ -110,16 +110,73 @@
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Mốc thời gian";
             // 
-            // rdoMMYYYY
+            // txtketthuc
             // 
-            this.rdoMMYYYY.AutoSize = true;
-            this.rdoMMYYYY.Location = new System.Drawing.Point(14, 65);
-            this.rdoMMYYYY.Name = "rdoMMYYYY";
-            this.rdoMMYYYY.Size = new System.Drawing.Size(91, 24);
-            this.rdoMMYYYY.TabIndex = 0;
-            this.rdoMMYYYY.TabStop = true;
-            this.rdoMMYYYY.Text = "MM/YYYY";
-            this.rdoMMYYYY.UseVisualStyleBackColor = true;
+            this.txtketthuc.Location = new System.Drawing.Point(441, 152);
+            this.txtketthuc.Mask = "00/00/0000";
+            this.txtketthuc.Name = "txtketthuc";
+            this.txtketthuc.Size = new System.Drawing.Size(100, 27);
+            this.txtketthuc.TabIndex = 9;
+            this.txtketthuc.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtbdau
+            // 
+            this.txtbdau.Location = new System.Drawing.Point(258, 152);
+            this.txtbdau.Mask = "00/00/0000";
+            this.txtbdau.Name = "txtbdau";
+            this.txtbdau.Size = new System.Drawing.Size(100, 27);
+            this.txtbdau.TabIndex = 8;
+            this.txtbdau.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtYYYY
+            // 
+            this.txtYYYY.Location = new System.Drawing.Point(441, 69);
+            this.txtYYYY.Name = "txtYYYY";
+            this.txtYYYY.Size = new System.Drawing.Size(100, 27);
+            this.txtYYYY.TabIndex = 7;
+            // 
+            // txtMM
+            // 
+            this.txtMM.Location = new System.Drawing.Point(258, 64);
+            this.txtMM.Name = "txtMM";
+            this.txtMM.Size = new System.Drawing.Size(100, 27);
+            this.txtMM.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(387, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Đến";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(213, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Từ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(384, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "YYYY";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(213, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "MM";
             // 
             // rdothoigian
             // 
@@ -132,86 +189,29 @@
             this.rdothoigian.Text = "Khoảng thời gian";
             this.rdothoigian.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // rdoMMYYYY
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "MM";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(384, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "YYYY";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Từ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(387, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Đến";
-            // 
-            // txtMM
-            // 
-            this.txtMM.Location = new System.Drawing.Point(258, 64);
-            this.txtMM.Name = "txtMM";
-            this.txtMM.Size = new System.Drawing.Size(100, 27);
-            this.txtMM.TabIndex = 6;
-            // 
-            // txtYYYY
-            // 
-            this.txtYYYY.Location = new System.Drawing.Point(441, 69);
-            this.txtYYYY.Name = "txtYYYY";
-            this.txtYYYY.Size = new System.Drawing.Size(100, 27);
-            this.txtYYYY.TabIndex = 7;
-            // 
-            // txtbdau
-            // 
-            this.txtbdau.Location = new System.Drawing.Point(258, 152);
-            this.txtbdau.Mask = "00/00/0000";
-            this.txtbdau.Name = "txtbdau";
-            this.txtbdau.Size = new System.Drawing.Size(100, 27);
-            this.txtbdau.TabIndex = 8;
-            this.txtbdau.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtketthuc
-            // 
-            this.txtketthuc.Location = new System.Drawing.Point(441, 152);
-            this.txtketthuc.Mask = "00/00/0000";
-            this.txtketthuc.Name = "txtketthuc";
-            this.txtketthuc.Size = new System.Drawing.Size(100, 27);
-            this.txtketthuc.TabIndex = 9;
-            this.txtketthuc.ValidatingType = typeof(System.DateTime);
+            this.rdoMMYYYY.AutoSize = true;
+            this.rdoMMYYYY.Location = new System.Drawing.Point(14, 65);
+            this.rdoMMYYYY.Name = "rdoMMYYYY";
+            this.rdoMMYYYY.Size = new System.Drawing.Size(91, 24);
+            this.rdoMMYYYY.TabIndex = 0;
+            this.rdoMMYYYY.TabStop = true;
+            this.rdoMMYYYY.Text = "MM/YYYY";
+            this.rdoMMYYYY.UseVisualStyleBackColor = true;
             // 
             // Chartbaocao
             // 
-            chartArea4.Name = "ChartArea1";
-            this.Chartbaocao.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.Chartbaocao.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.Chartbaocao.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Chartbaocao.Legends.Add(legend1);
             this.Chartbaocao.Location = new System.Drawing.Point(740, 227);
             this.Chartbaocao.Name = "Chartbaocao";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Số lượng bán";
-            this.Chartbaocao.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Số lượng bán";
+            this.Chartbaocao.Series.Add(series1);
             this.Chartbaocao.Size = new System.Drawing.Size(331, 240);
             this.Chartbaocao.TabIndex = 2;
             this.Chartbaocao.Text = "chart1";
@@ -226,11 +226,13 @@
             // 
             // buttimkiem
             // 
+            this.buttimkiem.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.buttimkiem.BorderRadius = 14;
             this.buttimkiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.buttimkiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.buttimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buttimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttimkiem.FillColor = System.Drawing.Color.OliveDrab;
             this.buttimkiem.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttimkiem.ForeColor = System.Drawing.Color.White;
             this.buttimkiem.Location = new System.Drawing.Point(105, 434);
@@ -242,11 +244,13 @@
             // 
             // buttimlai
             // 
+            this.buttimlai.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.buttimlai.BorderRadius = 14;
             this.buttimlai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.buttimlai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.buttimlai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buttimlai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttimlai.FillColor = System.Drawing.Color.OliveDrab;
             this.buttimlai.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttimlai.ForeColor = System.Drawing.Color.White;
             this.buttimlai.Location = new System.Drawing.Point(339, 434);
@@ -258,11 +262,13 @@
             // 
             // butin
             // 
+            this.butin.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.butin.BorderRadius = 14;
             this.butin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.butin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.butin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.butin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.butin.FillColor = System.Drawing.Color.OliveDrab;
             this.butin.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butin.ForeColor = System.Drawing.Color.White;
             this.butin.Location = new System.Drawing.Point(556, 434);

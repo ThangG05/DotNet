@@ -573,6 +573,8 @@
     <None Include="Resources\suzukigsxr150.png" />
     <None Include="Resources\suzukigsxs150.png" />
     <None Include="Resources\suzukiraider.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\print.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
